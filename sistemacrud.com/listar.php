@@ -23,7 +23,7 @@ include_once("conexao.php");
 				$pagina = (!empty($pagina_atual)) ? $pagina_atual :1;
 
 				//setar a quantidade de itens por pagina
-				$qnt_result_pg = 2;
+				$qnt_result_pg = 3;
 
 				//calcular o inicio visualização
 				$inicio = ($qnt_result_pg * $pagina) - $qnt_result_pg;
@@ -38,6 +38,7 @@ include_once("conexao.php");
 					echo "ID: " . $row_usuario['id']. "<br>";
 					echo "NOME: " . $row_usuario['nome']. "<br>";
 					echo "E-MAIL: " . $row_usuario['email']. "<br><hr>";
+					echo "<a href='edit_usuario.php?id=".$row_usuario['id']."'> Editar </a><br><br>";
 				}
 				//Paginação - somar a quantidade de usuários
 				$result_pg = "SELECT COUNT(id) AS num_result FROM usuarios";
