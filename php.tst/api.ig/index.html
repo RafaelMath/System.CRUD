@@ -15,6 +15,10 @@
         var token = ''
         fetch('https://api.instagram.com/v1/users/self/media/recent?access_token=' + token)
             .then(function(response) { return response.json()})
+            .then(function(response){
+                console.log(response)
+            })
+            /*
             .then(function(response) {
                 response.data.map(value => {
                     try {
@@ -28,7 +32,7 @@
                     }
                     
                 })
-            })
+            })*/
     </script>
 </body>
 </html>
